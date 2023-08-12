@@ -1,0 +1,76 @@
+Step 1: Create A TypeScript Project
+
+    - Create a Node.js project by initializing npm in your project's folder.
+    - Convert it into a TypeScript project by installing TypeScript.
+    - Configure your `tsconfig.json` to align with our recommended options for this project.
+    - Use npm to install `uuid` and the corresponding types for `uuid`.
+
+Step 2: Create Some Types
+
+    Define a Type to describe an InventoryItem with the following properties:
+        id: string
+        name: string
+        description: string
+
+    Define two types, Armor & Weapon both union with InventoryItem:
+	add properties damage or defense
+
+    Define a Type to describe a RPGCharacter with the following properties:
+        id: string
+        name: string
+	archtype: string
+        fightingStyle: string (e.g., "sword", "bow", "club")
+        inventory: InventoryItem[] (an array of InventoryItems)
+
+Step 3: Create Some Functions
+
+    createCharacter:
+        This function will return an object of type RPGCharacter. It will automatically generate a UUID for the id.
+        It will require the name, archtype and fightingStyle to be passed in as arguments.
+        It will also initialize an empty inventory for the character.
+
+    createInventoryItem:
+        This function will return an object of type Weapon or Armor. It will automatically generate a UUID for the id.
+        It will require the name and description and value to be passed in as arguments.
+
+    addToInventory:
+        This function will take an object of Weapon or Armor Type and an RPGCharacter object, and it will add the item to the character's inventory.
+
+    removeFromInventory:
+        This function will take an object of InventoryItem Type and an RPGCharacter object, and it will remove all instances of the item from the character's inventory, leaving the inventory empty for that item.
+
+    removeQuantityFromInventory:
+        This function will take an object of InventoryItem Type, an RPGCharacter object, and a quantity of the item to remove.
+        It will remove the specified quantity of instances of the item from the character's inventory.
+
+    inventoryValue:
+        This function will calculate the total value of all items in the character's inventory and return that value.
+
+    printInventory:
+        This function will take a character as an argument and print the items in the character's inventory using console.log.
+
+Step 4: Create Driver Code to Emulate a Front-End User
+
+    :
+        Create an RPGCharacter.
+        Create 3 InventoryItems (e.g., Sword, Bow, Club).
+        Add Sword to the character's inventory:
+            Print the contents of the character's inventory.
+            Print the total value of the character's inventory.
+        Add Bows to the character's inventory:
+            Print the contents of the character's inventory.
+            Print the total value of the character's inventory.
+        Add Clubs to the character's inventory:
+            Print the contents of the character's inventory.
+            Print the total value of the character's inventory.
+	Add Armor to the character's inventory:
+            Print the contents of the character's inventory.
+            Print the total value of the character's inventory.
+        Use the removeFromInventory function to remove all Swords from the character's inventory:
+            Print the contents of the character's inventory.
+            Print the total value of the character's inventory.
+        Use the removeQuantityFromInventory function to remove 2 Clubs from the character's inventory:
+            Print the contents of the character's inventory.
+            Print the total value of the character's inventory.
+
+

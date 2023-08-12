@@ -1,0 +1,94 @@
+Step 1: Create A TypeScript Project
+	1. Create a new node project by initializing npm in your project's folder.
+	2. Make it a TypeScript project by installing TypeScript.
+	3. Configure your `tsconfig` to align with our recommended options for this project.
+	4. Use npm to install `uuid` and the corresponding types for `uuid`.
+
+
+Follow the same instructions to create a TypeScript project for the OOP Cart system.
+Step 2: Create Some Classes
+
+    InventoryItem Class:
+
+	Create an abstract class named InventoryItem:
+
+    	    Encapsulate the class using private attributes with public getters/setters.
+    	    Attributes:
+        	id: a string defaulted to a UUID.
+        	name: a string.
+        	price: a number.
+        	description: a string.
+
+	Make sure to mark this class as abstract, as it will serve as a base class for the Weapon and Armor classes.
+	Weapon Class (Child of InventoryItem):
+
+    Create a class named Weapon that extends InventoryItem:
+
+        Add a private attribute:
+            damage: a number representing the damage value of the weapon.
+        Create a constructor that takes parameters for id, name, price, description, and damage. Use super() to call the parent class constructor.
+        Implement a getter for the damage attribute.
+
+    Armor Class (Child of InventoryItem):
+
+    Create a class named Armor that extends InventoryItem:
+
+        Add a private attribute:
+            defense: a number representing the defense value of the armor.
+        Create a constructor that takes parameters for id, name, price, description, and defense. Use super() to call the parent class constructor.
+        Implement a getter for the defense attribute.
+
+    Create a class named Character:
+        Encapsulate the class using private attributes with public getters/setters.
+        Attributes:
+            id: a string defaulted to a UUID.
+            name: a string.
+	    class: a string
+            fightingStyle: a string (sword, bow, club, etc.).
+            inventory: an array of InventoryItem objects.
+
+    Create a class named Inventory:
+        Encapsulate the class using private attributes with public getters/setters.
+        Attributes:
+            items: an array of InventoryItem objects.
+
+Step 3: Create Some Methods
+
+Character Class Methods:
+
+    addToInventory:
+        This method will take an object of InventoryItem Type and add the item to the character's inventory.
+
+    removeFromInventory:
+        This method will take an object of InventoryItem Type and remove all instances of the item from the character's inventory.
+
+    removeQuantityFromInventory:
+        This method will take an object of InventoryItem Type and a quantity of the item to remove.
+
+    inventoryValue:
+        This method will calculate the total value of all items in the character's inventory and return that value.
+
+    printInventory:
+        This method will console log the items in the character's inventory.
+
+Inventory Class Methods:
+
+    constructor:
+        The constructor will create an empty array of InventoryItem objects.
+
+    addItem:
+        This method will take an object of InventoryItem Type and add the item to the inventory.
+
+    removeItem:
+        This method will take an object of InventoryItem Type and remove the item from the inventory.
+
+Step 4: Create Driver Code to Emulate a Front-End User
+
+Use the classes and methods created to accomplish similar tasks with the RPG characters and their inventories:
+
+    Create a Character.
+    Create an Inventory.
+    Write code to add items from the inventory to the character's inventory, print the inventory, remove all instances of a singular item from the inventory, and remove a specified quantity from the inventory.
+    Verify that all functions work as expected. If any issues arise, figure out why and fix your functions.
+
+This approach will demonstrate how the concepts from both assignments can be integrated into a single OOP system, where RPG characters have their own inventories that function similarly to a shopping cart.
