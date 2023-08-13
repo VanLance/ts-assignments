@@ -26,8 +26,8 @@ Step 2: Create Some Classes
 
         Add a private attribute:
             damage: a number representing the damage value of the weapon.
-        Create a constructor that takes parameters for id, name, price, description, and damage. Use super() to call the parent class constructor.
-        Implement a getter for the damage attribute.
+        Create a constructor that takes parameters for  name, price, description, and damage. Use super() to call the parent class constructor.
+        Implement a getter and setter for the damage & range attribute.
 
     Armor Class (Child of InventoryItem):
 
@@ -35,16 +35,16 @@ Step 2: Create Some Classes
 
         Add a private attribute:
             defense: a number representing the defense value of the armor.
-        Create a constructor that takes parameters for id, name, price, description, and defense. Use super() to call the parent class constructor.
-        Implement a getter for the defense attribute.
+        Create a constructor that takes parameters for  name, price, description, and defense. Use super() to call the parent class constructor.
+        Implement a getter and setter for the defense attribute.
 
     Create a class named Character:
         Encapsulate the class using private attributes with public getters/setters.
         Attributes:
             id: a string defaulted to a UUID.
             name: a string.
-	    class: a string
-            fightingStyle: a string (sword, bow, club, etc.).
+	        archtype: a string
+            weapon: a string (sword, bow, club, etc.).
             inventory: an array of InventoryItem objects.
 
     Create a class named Inventory:
@@ -71,16 +71,6 @@ Character Class Methods:
     printInventory:
         This method will console log the items in the character's inventory.
 
-Inventory Class Methods:
-
-    constructor:
-        The constructor will create an empty array of InventoryItem objects.
-
-    addItem:
-        This method will take an object of InventoryItem Type and add the item to the inventory.
-
-    removeItem:
-        This method will take an object of InventoryItem Type and remove the item from the inventory.
 
 Step 4: Create Driver Code to Emulate a Front-End User
 

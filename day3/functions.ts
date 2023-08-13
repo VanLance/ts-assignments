@@ -14,6 +14,7 @@ function createCharacter(
     inventory: [weapon],
   };
 }
+
 function createInventoryItem(
   name: string,
   description: string,
@@ -44,6 +45,7 @@ function removeQuantityFromInventory(
     return itemName != item.name;
   });
 }
+
 function inventoryValue(character: RPGCharacter): number {
   let value = 0;
   for (const item of character.inventory) {
