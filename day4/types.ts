@@ -7,13 +7,16 @@ interface Shopable {
 
 interface Characterable{
   id: string
-  name: string
-  weapon: Weapon
-  armor?: Armor 
+  name: string,
+  archetype: string
+  fightingStyle: FightingStyle
   inventory: InventoryItem[]
 }
 
+type FightingStyle = 'ranged' | 'melee'
+
 export {
   Shopable,
-  Characterable
+  Characterable,
+  FightingStyle
 }

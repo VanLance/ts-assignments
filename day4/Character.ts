@@ -1,28 +1,27 @@
 import { v4 as uuidv4 } from 'uuid';
-import { Armor, Weapon } from './inventoryItems';
-import { Characterable } from './types';
+import { Characterable, FightingStyle } from './types';
 import InventoryItem from './InventoryItem';
 
-class RPGCharacter implements Characterable {
+export default class RPGCharacter implements Characterable {
+  public get fightingStyle(): FightingStyle {
+    return this._fightingStyle;
+  }
+  public set fightingStyle(value: FightingStyle) {
+    this._fightingStyle = value;
+  }
+  public get archetype(): string {
+    return this._archetype;
+  }
+  public set archetype(value: string) {
+    this._archetype = value;
+  }
   public get inventory(): InventoryItem[] {
     return this._inventory;
   }
   public set inventory(value: InventoryItem[]) {
     this._inventory = value;
   }
-  public get weapon(): Weapon {
-    return this._weapon;
-  }
-  public set weapon(value: Weapon) {
-    this._weapon = value;
-  }
-  public get age(): number {
-    return this._age;
-  }
-  public set age(value: number) {
-    this._age = value;
-  }
-  public get name(): string {
+ public get name(): string {
     return this._name;
   }
   public set name(value: string) {
@@ -30,20 +29,29 @@ class RPGCharacter implements Characterable {
   }
   constructor(
     private _name: string,
-    private _age: number,
-    private _weapon: Weapon,
+    private _archetype: string,
+    private _fightingStyle: FightingStyle,
     private _inventory: InventoryItem[],
     readonly id: string
-     = uuidv4()
+     = uuidv4(),
   ) {}
 
-  addItem(){}
+  addItem(item: InventoryItem) {
+    this.inventory.push(item);
+  }
 
-  removeItem(){}
+  removeItem(item: InventoryItem, count: number = 0) {
+    this.inventory = this.inventory.filter((currentItem) => {
+      if (currentItem.name == item.name) return count++ >= 1;
+      return currentItem.name != item.name;
+    });
+  }
 
-  removeItemQuanity(){}
-
-  displayInventory(){}
-
-  inventoryValue(){}
+  inventoryValue() {
+    let value = 0;
+    for (const item of this.inventory) {
+      value += item.price;
+    }
+    return value;
+  }
 }

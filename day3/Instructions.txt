@@ -19,7 +19,7 @@ Step 2: Create Some Types
         id: string
         name: string
 	archtype: string
-        fightingStyle: string (e.g., "sword", "bow", "club")
+        fightingStyle: literal type ranged or melee
         inventory: InventoryItem[] (an array of InventoryItems)
 
 Step 3: Create Some Functions

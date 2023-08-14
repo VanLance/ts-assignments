@@ -43,14 +43,19 @@ Step 2: Create Some Classes
         Attributes:
             id: a string defaulted to a UUID.
             name: a string.
-	        archtype: a string
-            weapon: a string (sword, bow, club, etc.).
+	    archtype: a string
+	    fightingStyle: literal melee or ranged
             inventory: an array of InventoryItem objects.
 
     Create a class named Inventory:
         Encapsulate the class using private attributes with public getters/setters.
         Attributes:
             items: an array of InventoryItem objects.
+
+    Create a class name Shop
+        - Create a class to describe a Shop
+        - Be sure to encapsulate your class using private attributes with public getters/setters
+        - items as an array of InventoryItems (This will hold all the items for sale in the shop)
 
 Step 3: Create Some Methods
 
@@ -71,10 +76,14 @@ Character Class Methods:
     printInventory:
         This method will console log the items in the character's inventory.
 
+- Shop Class Methods:
+    - constructor
+        - The constructor will create three (3) Items and add them to the list of items in the shop
+
 
 Step 4: Create Driver Code to Emulate a Front-End User
 
-Use the classes and methods created to accomplish similar tasks with the RPG characters and their inventories:
+Use the classes and methods created to accomplish tasks with the RPG characters and their inventories:
 
     Create a Character.
     Create an Inventory.
