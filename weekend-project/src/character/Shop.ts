@@ -32,4 +32,13 @@ export default class Shop implements Shopable {
       ),
     ]
   ) {}
+
+  addArmor(armor: Armor):void {
+    this._items.push(armor);
+  }
+
+  addWeapon(weapon: Weapon):void {
+    this._items.push(weapon);
+  }
+
 }

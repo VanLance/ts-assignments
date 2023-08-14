@@ -13,7 +13,7 @@ interface Characterable{
   inventory: InventoryItem[]
 }
 
-type FightingStyle = 'ranged' | 'melee'
+type FightingStyle = 'ranged' | 'melee' | 'magic'
 
 export {
   Shopable,

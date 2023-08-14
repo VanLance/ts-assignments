@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,31 +16,68 @@
   <body>
     <main class="flexing">
       <form id="character-form">
-        <label for="name">Character Name: </label><br />
-        <input name="name" type="text" required /><br />
-        <label for="archetype">Class: </label><br />
+        <label for="name">Character Name: </label><br>
+        <input name="name" type="text" required /><br>
+        <label for="archetype">Class: </label><br>
         <input name="archetype" type="text" name="archetype" required /><br />
-        <label for="fighting-style">Fighting Style: </label><br />
-        <input type="text" name="fighting-style" required /><br />
+        <label for="fighting-style">Fighting Style: </label><br>
+        <input type="text" name="fighting-style" required /><br>
         <button>Create Character</button>
       </form>
-      <div class="display-character card hide" style="width: 18rem">
+      <div class="display-character card hide" style="width: 14rem">
         <h5 class="card-title heading">Character Info</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item" id="display-name">Name: </li>
-          <li class="list-group-item" id="display-archetype">Class: </li>
-          <li class="list-group-item" id="display-inventory-value">Iventory Value: </li>
+          <li class="list-group-item" id="display-name">Name:</li>
+          <li class="list-group-item" id="display-archetype">Class:</li>
+          <li class="list-group-item" id="display-fighting-style">
+            Fighting Style:
+          </li>
+          <li class="list-group-item" id="display-inventory-value">
+            Iventory Value:
+          </li>
         </ul>
       </div>
-      <div class="inventory hide">
+      <div class="inventory hide" >
         <h2 class="heading">Inventory</h2>
-        <ul id="inventory-list"></ul>
+        <ul class="list-group list-group-flush" id="inventory-list"></ul>
       </div>
       <div class="shop hide">
         <h2 class="heading">Shop</h2>
         <ul id="shop-list"></ul>
       </div>
     </main>
+    <aside>
+      <form id="add-weapon-form" class="hide">
+        <h2>Add Weapon</h2>
+        <label for="name">name</label><br>
+        <input type="text" name="name" /><br>
+        <label for="description">description</label><br>
+        <input type="text" name="description" /><br>
+        <label for="damage">damage</label><br>
+        <input type="text" name='damage'/><br>
+        <label for="range">range</label><br>
+        <input type="text" name='range'/><br>
+        <label for="price">price</label><br>
+        <input type="text" name="price"><br>
+        <button>Add to Shop</button>
+      </form>
+      <form id="add-armor-form" class="hide">
+        <h2>Add Armor</h2>
+        <label for="name">name</label><br>
+        <input type="text" name="name"/><br>
+        <label for="description">description</label><br>
+        <input type="text" name="description" /><br>
+        <label for="defense">defense</label><br>
+        <input type="text" name="defense"/><br>
+        <label for="price">price</label><br>
+        <input type="text" name="price"><br>
+        <button>Add to Shop</button>
+      </form>
+    </aside>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
-

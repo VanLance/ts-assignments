@@ -41,17 +41,10 @@ class Armor extends InventoryItem {
   }
 }
 
-const weapon = new Weapon(
-  "Thor's hammer",
-  2000,
-  'Hammer of the gods',
-  999,
-  100
-);
 
 const starterIventory = [
   new Weapon('simple axe', 5, 'a plain axe', 10, 5),
-  new Weapon('simple sword', 5, 'a plain sword', 10, 5),
+  new Weapon('simple staff', 5, 'a plain staff', 10, 5),
   new Armor('leather armor', 10, 'armor of leather', 10),
 ];
 

@@ -1,6 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 
 export default abstract class InventoryItem{
+  
+
   public get description(): string {
     return this._description;
   }

@@ -21,3 +21,18 @@ form{
 .heading {
   padding:32px;
 }
+
+.list-group{
+  padding-left: 16px;
+}
+
+aside{
+  margin-left: 2rem;
+}
+
+@media  (max-width:1090px){
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+}
