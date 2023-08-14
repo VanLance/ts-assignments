@@ -1,0 +1,23 @@
+body{
+  height: 100%;
+}
+
+main{
+  margin:0;
+}
+
+form{
+  margin: auto
+}
+
+.hide{
+  display: none;
+}
+
+.flexing{
+  display: flex;
+}
+
+.heading {
+  padding:32px;
+}
